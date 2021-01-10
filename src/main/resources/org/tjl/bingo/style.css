@@ -1,0 +1,14 @@
+#title, #caller {
+    -fx-font-size: 32pt;
+}
+
+.game {
+    -fx-font-size: 24pt;
+}
+
+.borders {
+    -fx-padding: 10px;
+    -fx-border-color: black;
+    -fx-border-size: 5px;
+    -fx-border-style: solid;
+}

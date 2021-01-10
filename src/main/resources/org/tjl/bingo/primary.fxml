@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tjl.bingo.PrimaryController">
+   <children>
+      <Label fx:id="title" text="Welcome to Bingo!" />
+       <HBox spacing="10" alignment="CENTER">
+           <children>
+               <Label styleClass="game" text="We are playing for" />
+               <Label styleClass="game" fx:id="games" text="!!" />
+           </children>
+       </HBox>
+       <HBox spacing="20" alignment="CENTER">
+           <children>
+            <Button fx:id="calledNums" text="Called Numbers" disable="true" onAction="#showCalled"/>
+            <Label styleClass="borders" fx:id="caller" text="##"/>
+            <Button fx:id="nextNums" text="Next Number" onAction="#nextNum" disable="true"/>
+           </children>
+       </HBox>
+      <HBox alignment="CENTER" spacing="20">
+          <children>
+            <Button fx:id="setupBtn" text="Setup" onAction="#setupGame" />
+            <Button fx:id="bingoBtn" text="BINGO" disable="true" onAction="#gotBingo" />
+            <Button fx:id="cancelBtn" text="Cancel Game" disable="true" onAction="#cancelGame" />
+          </children>
+      </HBox>   
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <stylesheets>
+       <URL value="@style.css"/>
+   </stylesheets>
+</VBox>
